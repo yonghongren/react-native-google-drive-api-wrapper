@@ -140,7 +140,7 @@ export default class Files {
    }
    
    list(queryParams) {
-      return fetch(`${GDrive._urlFiles}${_stringifyQueryParams(queryParams)}`, {
+      return fetch(`${GDrive._urlFiles}${_stringifyQueryParams(queryParams)}&spaces=appDataFolder`, {
          headers: GDrive._createHeaders()
       });
    }
