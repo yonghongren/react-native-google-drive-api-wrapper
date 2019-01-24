@@ -58,7 +58,7 @@ export default class Files {
             headers: GDrive._createHeaders(
                `multipart/related; boundary=${this.params.boundary}`,
                body.length,
-               isBase64 ? ["Content-Transfer-Encoding", "base64"] : undefined),
+               isBase64 ? ["Content-Transfer-Encoding", "base64"] : []),
             body
          });
    }
